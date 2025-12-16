@@ -1,0 +1,45 @@
+{
+  "name": "my-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.2",
+    "@studio-freight/lenis": "^1.0.42",
+    "@tailwindcss/vite": "^4.1.17",
+    "axios": "^1.13.2",
+    "gsap": "^3.13.0",
+    "init": "^0.1.2",
+    "lucide-react": "^0.554.0",
+    "motion": "^12.23.24",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.9.6",
+    "react-three": "^0.9.7",
+    "reacticons": "^0.0.1",
+    "styled-components": "^6.1.19",
+    "tailwindcss": "^4.1.17",
+    "three": "^0.181.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "vite": "^7.2.4"
+  }
+}
