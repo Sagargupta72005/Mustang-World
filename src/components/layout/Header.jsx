@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Header = () => {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
@@ -31,42 +31,34 @@ const Header = () => {
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className="
-        w-full 
-        fixed top-0 left-0 z-50 
-        shadow-lg 
-        font-bold 
-        transition-colors 
-        bg-neutral-950 border-gray-700
-        dark:bg-neutral-900 dark:text-yellow-500
-      "
+      className="fixed top-0 left-0 z-50 w-full font-bold transition-colors border-gray-700 shadow-lg bg-neutral-950 dark:bg-neutral-900 dark:text-yellow-500"
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="flex items-center justify-between px-6 py-4 mx-auto max-w-7xl">
 
         {/* LOGO */}
         <a href="/" className="flex items-center gap-2">
           <img 
             src="https://as1.ftcdn.net/v2/jpg/02/71/87/52/1000_F_271875229_JzlwUotemLeMFirB2gqkv1bchCzaoivx.jpg" 
             alt="Logo"
-            className="w-20 h-fit object-center border-2 rounded-3xl"
+            className="object-center w-20 border-2 h-fit rounded-3xl"
           />
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden lg:flex space-x-10 text-lg">
+        <nav className="hidden space-x-10 text-lg lg:flex">
           <a href="/" className={isActive("/") ? activeClass : baseClass}>
             Home
           </a>
 
-          <a href="/Model" className={isActive("/Model") ? activeClass : baseClass}>
+          <a href="/model" className={isActive("/model") ? activeClass : baseClass}>
             Models
           </a>
 
-          <a href="/Gallery" className={isActive("/Gallery") ? activeClass : baseClass}>
+          <a href="/gallery" className={isActive("/gallery") ? activeClass : baseClass}>
             Gallery
           </a>
 
-          <a href="/About" className={isActive("/About") ? activeClass : baseClass}>
+          <a href="/about" className={isActive("/about") ? activeClass : baseClass}>
             About
           </a>
         </nav>
@@ -75,7 +67,7 @@ const Header = () => {
         <div className="flex items-center space-x-4 ">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-4 rounded-full cursor-pointer hover:border-amber-400 hover:text-neutral-800  transition"
+            className="p-4 transition rounded-full cursor-pointer hover:border-amber-400 hover:text-neutral-800"
           >
             {darkMode ? <Sun size={22} /> : <Moon size={22} />}
           </button>
@@ -92,7 +84,7 @@ const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="lg:hidden bg-black dark:bg-neutral-900 border-t border-gray-700 px-6 py-4 space-y-4"
+          className="px-6 py-4 space-y-4 bg-black border-t border-gray-700 lg:hidden dark:bg-neutral-900"
         >
           <a href="/" className={`block ${isActive("/") ? activeClass : baseClass}`}>
             Home

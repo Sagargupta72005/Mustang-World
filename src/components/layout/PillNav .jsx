@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { Sun, Moon } from "lucide-react";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import { motion } from "framer-motion";
 
 const PillNav = ({

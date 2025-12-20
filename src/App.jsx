@@ -8,26 +8,25 @@ import Newspage from "./page/Newspage";
 import SplashCursor from "./components/SplashCursor";
 import LoadingScreen1 from "./components/loading/LoadingScreen1";
 import Error404 from "./page/error";
-import Header from "./components/Header";
-import Footer from "./components/footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+
 export default function App() {
   return (
     <ThemeProvider>
-      
-
       <LoadingScreen1>
         <Header />
-        
+
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/Model" element={<Modelpage />} />
-          <Route path="/Gallery" element={<Gallery />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/News" element={<Newspage />} />
+          <Route path="/model" element={<Modelpage />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/news" element={<Newspage />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
-        <SplashCursor />
 
+        <SplashCursor />
         <Footer />
       </LoadingScreen1>
     </ThemeProvider>
