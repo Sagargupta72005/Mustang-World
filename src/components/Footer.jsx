@@ -90,7 +90,8 @@ const Footer = () => {
         />
       </div>
 
-      <div  className={`border-t pt-6 text-sm md:text-base ${
+      <div
+        className={`border-t pt-6 text-sm md:text-base ${
           darkMode ? "border-gray-700" : "border-gray-300"
         }`}
       >
@@ -103,7 +104,8 @@ const Footer = () => {
         </p>
       </div>
 
-      <div  className={`border-t pt-6 text-sm md:text-base ${
+      <div
+        className={`border-t pt-6 text-sm md:text-base ${
           darkMode ? "border-gray-700" : "border-gray-300"
         }`}
       >
