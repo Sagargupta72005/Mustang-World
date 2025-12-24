@@ -55,18 +55,18 @@ const ModelSection = () => {
         ${darkMode ? "bg-black text-white" : "bg-white text-black"}
       `}
     >
-      <h1 className="text-3xl md:text-6xl font-extrabold mt-10 text-center">
+      <h1 className="mt-10 text-3xl font-extrabold text-center md:text-6xl">
         BEYOND THE CONCRETE
       </h1>
 
       <div className="relative w-full max-w-[1200px] flex justify-center mt-14 px-4">
 
         {/* Left faded image */}
-        <div className="hidden md:block absolute left-0 opacity-20 scale-90">
+        <div className="absolute left-0 hidden scale-90 md:block opacity-20">
           <img
             src={models[(current - 1 + models.length) % models.length].img}
             alt=""
-            className="h-56 md:h-72 object-contain select-none"
+            className="object-contain h-56 select-none md:h-72"
           />
         </div>
 
@@ -75,15 +75,15 @@ const ModelSection = () => {
           ref={imageRef}
           src={models[current].img}
           alt="car"
-          className="h-56 sm:h-64 md:h-80 lg:h-96 z-20 select-none object-contain"
+          className="z-20 object-contain h-56 select-none sm:h-64 md:h-80 lg:h-96"
         />
 
         {/* Right faded image */}
-        <div className="hidden md:block absolute right-0 opacity-20 scale-90">
+        <div className="absolute right-0 hidden scale-90 md:block opacity-20">
           <img
             src={models[(current + 1) % models.length].img}
             alt=""
-            className="h-56 md:h-72 object-contain select-none"
+            className="object-contain h-56 select-none md:h-72"
           />
         </div>
 
@@ -121,7 +121,7 @@ const ModelSection = () => {
       </div>
 
       {/* Tabs */}
-      <div className="flex flex-wrap justify-center  gap-6 md:gap-10 mt-14 px-2">
+      <div className="flex flex-wrap justify-center gap-6 px-2 md:gap-10 mt-14">
         {models.map((m, index) => (
           <button
             key={m.id}
@@ -167,4 +167,4 @@ const ModelSection = () => {
   );
 };
 
-export default ModelSection;
+export default ModelSection

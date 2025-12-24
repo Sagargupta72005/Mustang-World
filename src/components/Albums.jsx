@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import { ThemeContext } from "../context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeContext } from "./context/ThemeContext";
 
 export function Albums() {
   const { darkMode } = useContext(ThemeContext);
@@ -51,13 +51,13 @@ export function Albums() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.45 }}
-            className="absolute w-full h-full object-cover"
+            className="absolute object-cover w-full h-full"
           />
         </AnimatePresence>
 
         <button
           onClick={prevImage}
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white px-3 py-3 rounded-full"
+          className="absolute px-3 py-3 text-white -translate-y-1/2 rounded-full left-3 top-1/2 bg-black/40 hover:bg-black/60"
         >
           ‹
         </button>
@@ -65,14 +65,14 @@ export function Albums() {
         {/* Next Button */}
         <button
           onClick={nextImage}
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white px-3 py-3 rounded-full"
+          className="absolute px-3 py-3 text-white -translate-y-1/2 rounded-full right-3 top-1/2 bg-black/40 hover:bg-black/60"
         >
           ›
         </button>
       </div>
 
       {/* Thumbnails */}
-      <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 max-w-4xl mx-auto">
+      <div className="grid max-w-4xl grid-cols-3 gap-4 mx-auto sm:grid-cols-5">
         {data.map(({ imgelink }, index) => (
           <motion.img
             key={index}

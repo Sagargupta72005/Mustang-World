@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext"; // update path as needed
+import { ThemeContext } from "./context/ThemeContext"; // update path as needed
 
 const SectionNameChips = ({ sectionName, names = [] }) => {
   const { darkMode } = useContext(ThemeContext);

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useContext } from "react";
 import { gsap } from "gsap";
-import { ThemeContext } from "../../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Musinfo = () => {
   const titleRef = useRef(null);
@@ -85,12 +85,12 @@ const Musinfo = () => {
     >
       <h1
         ref={titleRef}
-        className="text-3xl md:text-6xl font-bold underline mb-4"
+        className="mb-4 text-3xl font-bold underline md:text-6xl"
       >
         Mustang history
       </h1>
 
-      <p ref={textRef} className="text-lg md:text-2xl max-w-3xl text-center">
+      <p ref={textRef} className="max-w-3xl text-lg text-center md:text-2xl">
         The term "Mustang legacy" refers to the iconic history and cultural impact of the Ford Mustang, which was first introduced in 1964 and quickly became a symbol of American muscle and freedom...
       </p>
     </div>

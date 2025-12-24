@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const TextPressure = ({
   text = "Compressa",

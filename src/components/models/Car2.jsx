@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
-import { ThemeContext } from "../context/ThemeContext";
 import { motion } from "framer-motion";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Car2 = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -23,7 +23,7 @@ const Car2 = () => {
     `}
     >
       {/* Left: Sketchfab Model */}
-      <div className="sketchfab-embed-wrapper w-full lg:w-2/3">
+      <div className="w-full sketchfab-embed-wrapper lg:w-2/3">
         <div className="w-full h-[250px] sm:h-[350px] md:h-[420px] lg:h-[500px] xl:h-[600px]">
           <iframe
             title="Ford Mustang Fastback 1967"
@@ -38,7 +38,7 @@ const Car2 = () => {
         </div>
 
         <p
-          className="mt-2 text-center text-xs"
+          className="mt-2 text-xs text-center"
           style={{
             color: darkMode ? "#cccccc" : "#4A4A4A",
           }}
@@ -58,14 +58,14 @@ const Car2 = () => {
 
       {/* Right: Description */}
       <motion.div
-        className="lg:w-1/3 w-full px-3 sm:px-0 text-center lg:text-left"
+        className="w-full px-3 text-center lg:w-1/3 sm:px-0 lg:text-left"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4"
+          className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl"
         >
           Stylized Mustang
         </motion.h1>
@@ -74,7 +74,7 @@ const Car2 = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="leading-relaxed text-sm sm:text-base"
+          className="text-sm leading-relaxed sm:text-base"
         >
           Stylized Mustang refers to heavily customized versions of classic
           Mustangs, especially the 1967–1968 Fastback models. These cars are
@@ -87,4 +87,4 @@ const Car2 = () => {
   );
 };
 
-export default Car2;
+export default Car2

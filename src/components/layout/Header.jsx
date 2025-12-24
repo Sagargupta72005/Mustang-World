@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
-import { ThemeContext } from "../../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Header = () => {
   const { darkMode, setDarkMode } = useContext(ThemeContext);

@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef, useContext } from "react";
 import gsap from "gsap";
-import { ThemeContext } from "../context/ThemeContext";
 import SectionNameChips from "./Chips";
+import { ThemeContext } from "./context/ThemeContext";
 
 // MUSTANG 1969 NEWS DATA
 const newsData = [
@@ -89,23 +89,23 @@ const NewsN = () => {
           ))}
         </div>
 
-        <p className="text-xs uppercase tracking-wide mb-2">
+        <p className="mb-2 text-xs tracking-wide uppercase">
           {newsData[0].date}
         </p>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase max-w-3xl leading-snug">
+        <h2 className="max-w-3xl text-3xl font-bold leading-snug uppercase sm:text-4xl lg:text-5xl">
           {newsData[0].title}
         </h2>
       </div>
 
       {/* GRID SECTION */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
         {newsData.slice(1).map((item) => (
           <div key={item.id} className="news-item">
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-60 sm:h-64 md:h-72 object-cover mb-4 rounded-md"
+              className="object-cover w-full mb-4 rounded-md h-60 sm:h-64 md:h-72"
             />
 
             <div className="flex flex-wrap gap-2 mb-2">
@@ -121,16 +121,16 @@ const NewsN = () => {
               ))}
             </div>
 
-            <p className="text-xs uppercase tracking-wide mb-2">{item.date}</p>
+            <p className="mb-2 text-xs tracking-wide uppercase">{item.date}</p>
 
-            <h3 className="text-lg sm:text-xl font-bold uppercase leading-snug">
+            <h3 className="text-lg font-bold leading-snug uppercase sm:text-xl">
               {item.title}
             </h3>
           </div>
         ))}
       </div>
 
-      {/* <div className="flex justify-center items-center gap-6 mt-16">
+      {/* <div className="flex items-center justify-center gap-6 mt-16">
         <span className={`w-12 h-[2px] ${darkMode ? "bg-white" : "bg-black"}`} />
         <span className="w-6 h-[2px] bg-gray-400" />
         <span className="w-6 h-[2px] bg-gray-400" />

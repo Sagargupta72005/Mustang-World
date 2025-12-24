@@ -46,7 +46,7 @@ function CarModel({ color }) {
 function Spec({ label, value }) {
   return (
     <div className="text-center">
-      <p className="uppercase text-neutral-400 text-sm tracking-wider">{label}</p>
+      <p className="text-sm tracking-wider uppercase text-neutral-400">{label}</p>
       <p className="text-2xl font-bold">{value}</p>
     </div>
   );
@@ -69,10 +69,10 @@ function HeroShowcase({ color }) {
   }, []);
 
   return (
-    <section className="relative w-full bg-black flex h-full overflow-hidden">
+    <section className="relative flex w-full h-full overflow-hidden bg-black">
       {/* Title */}
-      <div className="absolute top-5  text-center w-full px-4">
-        <h1 className="text-white font-extrabold tracking-tight text-4xl sm:text-5xl md:text-7xl">
+      <div className="absolute w-full px-4 text-center top-5">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-7xl">
           MUSTANG GT 2015
         </h1>
       </div>
@@ -80,7 +80,7 @@ function HeroShowcase({ color }) {
       {/* 3D Model */}
       <div
         ref={containerRef}
-        className="w-full flex items-center justify-center"
+        className="flex items-center justify-center w-full"
         style={{ height: "20vh", minHeight: "800px" }}
       >
         <Canvas camera={{ position: [0, 1.2, 6], fov: 40 }}>
@@ -102,7 +102,7 @@ function HeroShowcase({ color }) {
       </div>
 
       {/* Specs */}
-      <div className="absolute bottom-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-10 text-white text-8xl w-full justify-center px-90">
+      <div className="absolute flex flex-col justify-center w-full space-y-4 text-white bottom-10 md:flex-row md:space-y-0 md:space-x-10 text-8xl px-90">
         <Spec label="MOTOR" value="6.2 Liter V8" />
         <Spec label="MAX SPEED" value="300 KM/H" />
         <Spec label="0-100 KM/H" value="4.2 S" />
@@ -116,7 +116,7 @@ function HeroShowcase({ color }) {
 // --------------------------------------
 function ColorSelector({ colors, selected, onSelect }) {
   return (
-    <div className="flex space-x-4 overflow-x-auto px-4 py-2 cursor-pointer bg-neutral-800 rounded-xl shadow-xl">
+    <div className="flex px-4 py-2 space-x-4 overflow-x-auto shadow-xl cursor-pointer bg-neutral-800 rounded-xl">
       {colors.map((c) => (
         <button
           key={c.id}
@@ -146,12 +146,12 @@ function ConfiguratorPage() {
   ];
 
   return (
-    <div className="bg-black  min-h-screen justify-center md:w-full w-full cursor-pointer text-white flex flex-col items-center">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen text-white bg-black cursor-pointer md:w-full">
       
       <HeroShowcase  color={selectedColor} />
 
       {/* Color Selector */}
-      <div className="flex justify-center mt-5 w-full max-w-3xl">
+      <div className="flex justify-center w-full max-w-3xl mt-5">
         <ColorSelector colors={colors} selected={selectedColor} onSelect={setSelectedColor} />
       </div>
 

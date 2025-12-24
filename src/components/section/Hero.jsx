@@ -33,14 +33,13 @@ const Hero = () => {
     >
       
       <motion.div
-        className="w-full md:w-1/2 lg:w-1/2 flex flex-col justify-between items-center  mb-8 md:mb-0 sm:px-6"
+        className="flex flex-col items-center justify-between w-full mb-8 md:w-1/2 lg:w-1/2 md:mb-0 sm:px-6"
         initial={{ opacity: 0, x: -1280 }}
         animate={{ opacity: 1, x: 10,y:5}}
         transition={{ duration: 1 }}
         
       >
-        <h1 className="font-extrabold bg-linear-to-r from-yellow-300 via-yellow-400 to-red-400  md:w-full pb-5
-        bg-clip-text text-transparent text-4xl flex justify-center items-center sm:text-4xl lg:text-6xl  underline decoration-red-800/70">
+        <h1 className="flex items-center justify-center pb-5 text-4xl font-extrabold text-transparent underline bg-linear-to-r from-yellow-300 via-yellow-400 to-red-400 md:w-full bg-clip-text sm:text-4xl lg:text-6xl decoration-red-800/70">
           Ford Mustang 1967
         </h1>
 
@@ -61,7 +60,7 @@ const Hero = () => {
         {isMedium && !expanded && (
           <button
             onClick={() => setExpanded(true)}
-            className="text-yellow-500 underline text-sm mt-2"
+            className="mt-2 text-sm text-yellow-500 underline"
           >
             Read More
           </button>
@@ -69,7 +68,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-        className="text-a md:w-1/2 lg:w-1/2 flex justify-center"
+        className="flex justify-center text-a md:w-1/2 lg:w-1/2"
         drag
         initial={{ opacity: 0, x: 1050 }}
         animate={{ opacity: 1, x: 20 }}
@@ -83,11 +82,11 @@ const Hero = () => {
         whileHover={{scale: 1.1}}
           src="https://media.gettyimages.com/id/1475841990/photo/model-ford-mustang-gt-cobra.jpg?s=612x612&w=0&k=20&c=di2co11f0Bjh-fXPlckS_gZslq-_rzPTmBYRk74xZSs="
           alt="Mustang"
-          className="w-full max-w-xs sm:max-w-md lg:max-w-xl rounded-2xl shadow-xl transition-colors"
+          className="w-full max-w-xs transition-colors shadow-xl sm:max-w-md lg:max-w-xl rounded-2xl"
         />
       </motion.div>
     </div>
   );
 };
 
-export default Hero;
+export default Hero

@@ -1,10 +1,10 @@
 
-import Hero from "../section/Hero";
 import TextPressure from "../components/home/TextPressure";
-import ModelSection from "../section/ModelSection";
 import ReadMore from "../components/home/ReadMore";
 import News from "../components/home/News";
 import ConfiguratorPage from "../components/ConfiguratorPage";
+import ModelSection from "../components/section/ModelSection";
+import Hero from "../components/section/Hero";
 
 const Home = () => {
   return (

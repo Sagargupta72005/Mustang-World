@@ -1,8 +1,6 @@
 import React from "react";
 import { Albums } from "../components/Albums";
 import Stack from "../components/gallery/CardRotate";
-import { Mustangpara } from "../data/Mustangpara";
-import MustangHero from "../components/home/MustangHero";
 
 const Gallery = () => {
   const images = [

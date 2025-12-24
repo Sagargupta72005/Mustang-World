@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { useState, useEffect, useContext, useMemo } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext";
 
 function CardRotate({ children, onSendToBack, sensitivity }) {
   const x = useMotionValue(0);
@@ -119,7 +119,7 @@ export default function Stack({
                 <img
                   src={card.img}
                   alt={`card-${card.id}`}
-                  className="w-full h-full object-cover pointer-events-none"
+                  className="object-cover w-full h-full pointer-events-none"
                 />
               </motion.div>
             </CardRotate>

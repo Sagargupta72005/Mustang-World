@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./page/Home";
-import { ThemeProvider } from "./context/ThemeContext";
 import Gallery from "./page/Gallery";
 import Modelpage from "./page/Modelpage";
 import About from "./page/About";
@@ -10,6 +9,7 @@ import LoadingScreen1 from "./components/loading/LoadingScreen1";
 import Error404 from "./page/error";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import { ThemeProvider } from "./components/context/ThemeContext";
 
 export default function App() {
   return (
